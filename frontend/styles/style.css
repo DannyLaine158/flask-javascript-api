@@ -1,6 +1,5 @@
-body {
+.center-row {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
 }
@@ -25,4 +24,18 @@ body {
 
 .btn:hover {
     background-color: #1565C0;
+}
+
+#login-loader {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Ver: block, No ver: None */
+    text-align: center;
+    z-index: 1000;
+}
+
+#login-loader .preloader-wrapper {
+    margin: 0 auto;
 }
