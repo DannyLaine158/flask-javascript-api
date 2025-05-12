@@ -8,7 +8,7 @@ def load_db():
     # app.config['DATABASE_FILE']
     with open(current_app.config['DATABASE_FILE']) as f:
         return json.load(f)
-    
+
 def save_db(data):
     with open(current_app.config['DATABASE_FILE'], 'w') as f:
         json.dump(data, f, indent=2)
