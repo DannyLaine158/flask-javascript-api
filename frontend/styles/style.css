@@ -39,3 +39,25 @@
 #login-loader .preloader-wrapper {
     margin: 0 auto;
 }
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#gallery .col{
+    display: flex;
+    flex-direction: column;
+    flex:0 1 calc(33.33% - 1rem);
+    box-sizing: border-box;
+}
+
+#gallery .card{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 200px;
+}

@@ -6,6 +6,7 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="grey lighten-4">
     <!-- Navbar -->
@@ -35,10 +36,14 @@
     <!-- Muestra de informacion -->
     <div class="container">
         <div class="section">
+            <!-- Muestra el nombre del usuario -->
             <h5 id="user-greeting" class="blue-text text-darken-3"></h5>
+            <!-- Muestra la galería de imágenes -->
+            <div class="row" id="gallery"></div>
         </div>
     </div>
 
+    <script src="materialize/js/materialize.min.js"></script>
     <script src="javascript/home.js"></script>
     <script src="javascript/auth/logout.js"></script>
 </body>
