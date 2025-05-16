@@ -11,7 +11,7 @@ def load_db():
 def save_db(data):
     with open(current_app.config['DATABASE_FILE'], 'w') as f:
         json.dump(data, f, indent=2)
-    
+
 @images_bp.route('/images', methods=["GET"])
 def get_images():
     db = load_db()
@@ -30,7 +30,8 @@ def upload():
         new_image = {
             'id': len(db['images']) + 1,
             'user_id': int(user_id),
-            'filename': filename
+            'filename': filename,
+            'comments': []
         }
         db['images'].append(new_image)
         save_db(db)
