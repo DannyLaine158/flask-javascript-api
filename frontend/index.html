@@ -10,56 +10,33 @@
 </head>
 <body class="grey lighten-4">
     <!-- Navbar -->
-    <nav class="blue">
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">MyPinterest</a>
-            <ul class="right">
-                <li id="li-general"><a id="btn-general">Galería general</a></li>
-                <li id="li-misfotos"><a id="btn-misfotos">Mi galería</a></li>
-                <li id="li-logout">
-                    <a class="red-text text-lighten-5" id="btn-logout">Cerrar Sesión</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <my-navbar></my-navbar>
 
     <!-- Boton flotante para cargar archivo -->
-    <div class="fixed-action-btn">
-        <a id="fab-upload" class="btn-floating btn-large blue">
-            <i class="material-icons">add_a_photo</i>
-        </a>
-    </div>
-
-    <!-- Input para recibir archivo -->
-    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    <image-uploader></image-uploader>
 
     <!-- Muestra de informacion -->
     <div class="container">
         <div class="section">
-            <!-- Muestra el nombre del usuario -->
-            <h5 id="user-greeting" class="blue-text text-darken-3"></h5>
+            <!-- Saludo de usuario -->
+            <user-greeting></user-greeting>
 
             <!-- Loader de cada una de las imágenes -->
-            <div id="loader" class="center-align" style="margin-top: 50px; display: none;">
-                <div class="preloader-wrapper active">
-                    <div class="spinner-layer spinner-blue-only">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <spinner-loader></spinner-loader>
 
-            <!-- Muestra la galería de imágenes -->
-            <div class="row" id="gallery"></div>
+            <!-- Galería de imágenes -->
+            <image-gallery></image-gallery>
         </div>
     </div>
+
+    <my-footer></my-footer>
+
+    <script type="module" src="components/navbar.js"></script>
+    <script type="module" src="components/image-uploader.js"></script>
+    <script type="module" src="components/user-greeting.js"></script>
+    <script type="module" src="components/spinner-loader.js"></script>
+    <script type="module" src="components/image-galley.js"></script>
+    <script type="module" src="components/footer.js"></script>
 
     <script src="materialize/js/materialize.min.js"></script>
     <script type="module" src="javascript/home/main.js"></script>
